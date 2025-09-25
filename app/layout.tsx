@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import ScrollToTop from "./components/ScrollToTop";
 import "./globals.css";
@@ -54,7 +55,7 @@ export default function RootLayout({
 
         <header className="w-full bg-white shadow-sm">
           <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-            <a href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="h-10 w-10 rounded-full bg-emerald-600 text-white grid place-items-center font-bold">
                 G
               </div>
@@ -62,9 +63,9 @@ export default function RootLayout({
                 <div className="font-bold tracking-tight">Graceville Elementary School</div>
                 <div className="text-xs text-neutral-600">Nsukka</div>
               </div>
-            </a>
+            </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <a className="hover:text-emerald-700" href="/">Home</a>
+              <Link className="hover:text-emerald-700" href="/">Home</Link>
               <a className="hover:text-emerald-700" href="#about">About Us</a>
               <a className="hover:text-emerald-700" href="#news">News/Events</a>
               <a className="hover:text-emerald-700" href="#gallery">Gallery</a>
@@ -100,7 +101,7 @@ export default function RootLayout({
             <div>
               <h3 className="font-semibold mb-3">Information Link</h3>
               <ul className="space-y-2 text-sm">
-                <li><a className="hover:underline" href="/">Home</a></li>
+                <li><Link className="hover:underline" href="/">Home</Link></li>
                 <li><a className="hover:underline" href="#about">About us</a></li>
                 <li><a className="hover:underline" href="#news">News/Events</a></li>
                 <li><a className="hover:underline" href="#portal">Login</a></li>
